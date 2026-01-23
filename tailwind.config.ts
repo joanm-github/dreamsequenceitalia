@@ -64,6 +64,10 @@ export default {
         phosphor: "hsl(var(--phosphor))",
         amber: "hsl(var(--amber))",
         terminal: "hsl(var(--terminal))",
+        "warm-brown": "hsl(var(--warm-brown))",
+        cream: "hsl(var(--cream))",
+        terracotta: "hsl(var(--terracotta))",
+        rust: "hsl(var(--rust))",
       },
       borderRadius: {
         lg: "var(--radius)",

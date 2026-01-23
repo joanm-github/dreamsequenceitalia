@@ -3,99 +3,106 @@
 @tailwind utilities;
 
 /* ANALOG ELECTRONIC DESIGN SYSTEM
-   Inspired by early 70s synthesizers, CRT terminals, and ambient electronic music
+   Inspired by early 70s synthesizers - warm, analog, organic
+   Color palette: browns, cream, warm oranges - no electric colors
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Core palette - Deep analog darkness */
-    --background: 220 15% 6%;
-    --foreground: 120 100% 85%;
+    /* Core palette - Warm analog darkness */
+    --background: 30 15% 6%;
+    --foreground: 35 30% 85%;
     
-    /* Card surfaces - slightly elevated */
-    --card: 220 15% 8%;
-    --card-foreground: 120 60% 80%;
+    /* Card surfaces - warm elevated */
+    --card: 30 15% 9%;
+    --card-foreground: 35 25% 80%;
     
-    --popover: 220 15% 10%;
-    --popover-foreground: 120 60% 85%;
+    --popover: 30 15% 11%;
+    --popover-foreground: 35 25% 85%;
     
-    /* Primary - Phosphor Green (CRT terminal) */
-    --primary: 120 100% 50%;
-    --primary-foreground: 220 15% 6%;
-    --primary-glow: 120 100% 50%;
+    /* Primary - Warm Cream (vintage paper) */
+    --primary: 35 40% 75%;
+    --primary-foreground: 30 15% 8%;
+    --primary-glow: 35 40% 75%;
     
-    /* Secondary - Amber (VU meter warm) */
-    --secondary: 40 100% 50%;
-    --secondary-foreground: 220 15% 6%;
-    --secondary-glow: 40 100% 50%;
+    /* Secondary - Soft Terracotta/Orange */
+    --secondary: 25 50% 55%;
+    --secondary-foreground: 30 15% 8%;
+    --secondary-glow: 25 50% 55%;
     
-    /* Muted - Dim console */
-    --muted: 220 10% 15%;
-    --muted-foreground: 120 20% 50%;
+    /* Muted - Warm grey-brown */
+    --muted: 30 10% 15%;
+    --muted-foreground: 35 15% 55%;
     
-    /* Accent - Soft phosphor */
-    --accent: 120 40% 20%;
-    --accent-foreground: 120 80% 80%;
+    /* Accent - Soft sepia */
+    --accent: 35 25% 18%;
+    --accent-foreground: 35 35% 80%;
     
-    --destructive: 0 62.8% 50%;
+    --destructive: 0 45% 45%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Borders - Subtle grid lines */
-    --border: 120 20% 20%;
-    --input: 120 20% 15%;
-    --ring: 120 100% 50%;
+    /* Borders - Warm subtle */
+    --border: 35 15% 18%;
+    --input: 35 15% 15%;
+    --ring: 35 40% 65%;
     
     --radius: 0.25rem;
     
-    /* Custom analog colors */
-    --phosphor: 120 100% 50%;
-    --amber: 40 100% 50%;
-    --terminal: 120 100% 85%;
-    --scanline: 120 100% 50%;
-    --noise: 220 10% 12%;
+    /* Custom analog colors - warm palette */
+    --phosphor: 35 40% 75%;
+    --amber: 25 50% 55%;
+    --terminal: 35 30% 85%;
+    --scanline: 35 40% 75%;
+    --noise: 30 10% 10%;
     
-    /* Gradients */
-    --gradient-glow: radial-gradient(ellipse at center, hsl(120 100% 50% / 0.15) 0%, transparent 70%);
-    --gradient-vignette: radial-gradient(ellipse at center, transparent 40%, hsl(220 15% 4%) 100%);
-    --gradient-terminal: linear-gradient(180deg, hsl(120 100% 50% / 0.05) 0%, transparent 100%);
+    /* Accent warm tones */
+    --warm-brown: 25 35% 25%;
+    --cream: 40 35% 88%;
+    --terracotta: 18 45% 45%;
+    --rust: 15 50% 35%;
     
-    /* Shadows */
-    --shadow-glow: 0 0 20px hsl(120 100% 50% / 0.3);
-    --shadow-amber: 0 0 20px hsl(40 100% 50% / 0.3);
+    /* Gradients - warm */
+    --gradient-glow: radial-gradient(ellipse at center, hsl(35 40% 75% / 0.10) 0%, transparent 70%);
+    --gradient-vignette: radial-gradient(ellipse at center, transparent 40%, hsl(30 15% 4%) 100%);
+    --gradient-terminal: linear-gradient(180deg, hsl(35 40% 75% / 0.03) 0%, transparent 100%);
+    
+    /* Shadows - warm */
+    --shadow-glow: 0 0 20px hsl(35 40% 75% / 0.2);
+    --shadow-amber: 0 0 20px hsl(25 50% 55% / 0.2);
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.5);
 
-    --sidebar-background: 220 15% 8%;
-    --sidebar-foreground: 120 60% 80%;
-    --sidebar-primary: 120 100% 50%;
-    --sidebar-primary-foreground: 220 15% 6%;
-    --sidebar-accent: 120 40% 20%;
-    --sidebar-accent-foreground: 120 80% 80%;
-    --sidebar-border: 120 20% 20%;
-    --sidebar-ring: 120 100% 50%;
+    --sidebar-background: 30 15% 9%;
+    --sidebar-foreground: 35 25% 80%;
+    --sidebar-primary: 35 40% 75%;
+    --sidebar-primary-foreground: 30 15% 8%;
+    --sidebar-accent: 35 25% 18%;
+    --sidebar-accent-foreground: 35 35% 80%;
+    --sidebar-border: 35 15% 18%;
+    --sidebar-ring: 35 40% 65%;
   }
 
   .dark {
-    --background: 220 15% 6%;
-    --foreground: 120 100% 85%;
-    --card: 220 15% 8%;
-    --card-foreground: 120 60% 80%;
-    --popover: 220 15% 10%;
-    --popover-foreground: 120 60% 85%;
-    --primary: 120 100% 50%;
-    --primary-foreground: 220 15% 6%;
-    --secondary: 40 100% 50%;
-    --secondary-foreground: 220 15% 6%;
-    --muted: 220 10% 15%;
-    --muted-foreground: 120 20% 50%;
-    --accent: 120 40% 20%;
-    --accent-foreground: 120 80% 80%;
-    --destructive: 0 62.8% 50%;
+    --background: 30 15% 6%;
+    --foreground: 35 30% 85%;
+    --card: 30 15% 9%;
+    --card-foreground: 35 25% 80%;
+    --popover: 30 15% 11%;
+    --popover-foreground: 35 25% 85%;
+    --primary: 35 40% 75%;
+    --primary-foreground: 30 15% 8%;
+    --secondary: 25 50% 55%;
+    --secondary-foreground: 30 15% 8%;
+    --muted: 30 10% 15%;
+    --muted-foreground: 35 15% 55%;
+    --accent: 35 25% 18%;
+    --accent-foreground: 35 35% 80%;
+    --destructive: 0 45% 45%;
     --destructive-foreground: 0 0% 100%;
-    --border: 120 20% 20%;
-    --input: 120 20% 15%;
-    --ring: 120 100% 50%;
+    --border: 35 15% 18%;
+    --input: 35 15% 15%;
+    --ring: 35 40% 65%;
   }
 }
 
@@ -109,7 +116,7 @@
     font-feature-settings: "kern" 1;
   }
 
-  /* Custom scrollbar */
+  /* Custom scrollbar - warm */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -129,7 +136,7 @@
 }
 
 @layer components {
-  /* Scanline effect overlay */
+  /* Scanline effect overlay - subtle warm */
   .scanlines {
     position: relative;
   }
@@ -142,26 +149,26 @@
       0deg,
       transparent,
       transparent 2px,
-      hsl(var(--phosphor) / 0.03) 2px,
-      hsl(var(--phosphor) / 0.03) 4px
+      hsl(var(--phosphor) / 0.02) 2px,
+      hsl(var(--phosphor) / 0.02) 4px
     );
     pointer-events: none;
     z-index: 10;
   }
 
-  /* CRT glow effect */
+  /* CRT glow effect - warm cream */
   .crt-glow {
     text-shadow: 
-      0 0 5px hsl(var(--phosphor) / 0.8),
-      0 0 10px hsl(var(--phosphor) / 0.5),
-      0 0 20px hsl(var(--phosphor) / 0.3);
+      0 0 5px hsl(var(--phosphor) / 0.6),
+      0 0 10px hsl(var(--phosphor) / 0.3),
+      0 0 20px hsl(var(--phosphor) / 0.15);
   }
 
   .amber-glow {
     text-shadow: 
-      0 0 5px hsl(var(--amber) / 0.8),
-      0 0 10px hsl(var(--amber) / 0.5),
-      0 0 20px hsl(var(--amber) / 0.3);
+      0 0 5px hsl(var(--amber) / 0.6),
+      0 0 10px hsl(var(--amber) / 0.3),
+      0 0 20px hsl(var(--amber) / 0.15);
   }
 
   /* Noise texture overlay */
@@ -174,7 +181,7 @@
     position: absolute;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    opacity: 0.02;
     pointer-events: none;
     z-index: 1;
   }
@@ -191,9 +198,9 @@
     50% { opacity: 0; }
   }
 
-  /* Analog button styles */
+  /* Analog button styles - warm */
   .btn-analog {
-    @apply relative overflow-hidden border border-primary/50 bg-transparent text-primary;
+    @apply relative overflow-hidden border border-primary/40 bg-transparent text-primary;
     @apply transition-all duration-500 ease-out;
   }
 
@@ -207,12 +214,13 @@
   }
 
   .btn-analog:hover {
-    @apply border-primary shadow-[0_0_20px_hsl(var(--phosphor)/0.3)];
+    @apply border-primary shadow-[0_0_20px_hsl(var(--phosphor)/0.2)];
   }
 
-  /* VU meter bar animation */
+  /* VU meter bar animation - warm gradient */
   .vu-bar {
-    @apply h-1 bg-gradient-to-r from-primary via-secondary to-destructive rounded-sm;
+    @apply h-1 rounded-sm;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--destructive)));
     animation: vu-pulse 2s ease-in-out infinite;
   }
 
@@ -256,17 +264,17 @@
     }
   }
 
-  /* Glow pulse */
+  /* Glow pulse - warm */
   .glow-pulse {
     animation: glowPulse 3s ease-in-out infinite;
   }
 
   @keyframes glowPulse {
     0%, 100% { 
-      filter: drop-shadow(0 0 10px hsl(var(--phosphor) / 0.3));
+      filter: drop-shadow(0 0 10px hsl(var(--phosphor) / 0.2));
     }
     50% { 
-      filter: drop-shadow(0 0 25px hsl(var(--phosphor) / 0.6));
+      filter: drop-shadow(0 0 25px hsl(var(--phosphor) / 0.4));
     }
   }
 
@@ -280,12 +288,17 @@
     50% { transform: scaleY(1); }
   }
 
-  /* Grid lines background */
+  /* Grid lines background - warm subtle */
   .grid-lines {
     background-image: 
-      linear-gradient(hsl(var(--phosphor) / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--phosphor) / 0.05) 1px, transparent 1px);
+      linear-gradient(hsl(var(--phosphor) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--phosphor) / 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+
+  /* Sepia photo effect */
+  .sepia-warm {
+    filter: sepia(0.2) saturate(0.9) brightness(0.95);
   }
 }
 

@@ -32,6 +32,7 @@ export interface Concert {
   country: string;
   notes?: string;
   tourName?: string;
+  posterImage?: string;
 }
 
 export interface GalleryImage {
@@ -202,16 +203,16 @@ export const discography: Disc[] = [
 // CONCERTS HISTÒRICS
 // ============================================
 export const concerts: Concert[] = [
-  { id: "c1", date: "1975-03-15", venue: "Catedral de Colònia", city: "Colònia", country: "Alemanya", tourName: "Nebel über Europa", notes: "Concert inaugural de la gira" },
-  { id: "c2", date: "1975-03-22", venue: "Paradiso", city: "Amsterdam", country: "Països Baixos", tourName: "Nebel über Europa" },
-  { id: "c3", date: "1975-04-05", venue: "Roundhouse", city: "Londres", country: "Regne Unit", tourName: "Nebel über Europa", notes: "Sold out en 2 hores" },
-  { id: "c4", date: "1975-04-12", venue: "Olympia", city: "París", country: "França", tourName: "Nebel über Europa" },
-  { id: "c5", date: "1976-09-20", venue: "Berliner Philharmonie", city: "Berlín", country: "Alemanya", notes: "Presentació de Kristallnacht" },
-  { id: "c6", date: "1977-01-10", venue: "Planetari de Munic", city: "Munic", country: "Alemanya", notes: "Inici de la residència" },
-  { id: "c7", date: "1978-11-08", venue: "Shibuya Kokaido", city: "Tòquio", country: "Japó", tourName: "Eastern Horizons" },
-  { id: "c8", date: "1978-11-15", venue: "Festival Hall", city: "Osaka", country: "Japó", tourName: "Eastern Horizons" },
-  { id: "c9", date: "1978-11-22", venue: "Kyoto Concert Hall", city: "Kyoto", country: "Japó", tourName: "Eastern Horizons", notes: "Concert final de la gira" },
-  { id: "c10", date: "1979-06-21", venue: "Solstici d'Estiu", city: "Stonehenge", country: "Regne Unit", notes: "Actuació especial a l'alba" },
+  { id: "c1", date: "1975-03-15", venue: "Catedral de Colònia", city: "Colònia", country: "Alemanya", tourName: "Nebel über Europa", notes: "Concert inaugural de la gira", posterImage: "/placeholder.svg" },
+  { id: "c2", date: "1975-03-22", venue: "Paradiso", city: "Amsterdam", country: "Països Baixos", tourName: "Nebel über Europa", posterImage: "/placeholder.svg" },
+  { id: "c3", date: "1975-04-05", venue: "Roundhouse", city: "Londres", country: "Regne Unit", tourName: "Nebel über Europa", notes: "Sold out en 2 hores", posterImage: "/placeholder.svg" },
+  { id: "c4", date: "1975-04-12", venue: "Olympia", city: "París", country: "França", tourName: "Nebel über Europa", posterImage: "/placeholder.svg" },
+  { id: "c5", date: "1976-09-20", venue: "Berliner Philharmonie", city: "Berlín", country: "Alemanya", notes: "Presentació de Kristallnacht", posterImage: "/placeholder.svg" },
+  { id: "c6", date: "1977-01-10", venue: "Planetari de Munic", city: "Munic", country: "Alemanya", notes: "Inici de la residència", posterImage: "/placeholder.svg" },
+  { id: "c7", date: "1978-11-08", venue: "Shibuya Kokaido", city: "Tòquio", country: "Japó", tourName: "Eastern Horizons", posterImage: "/placeholder.svg" },
+  { id: "c8", date: "1978-11-15", venue: "Festival Hall", city: "Osaka", country: "Japó", tourName: "Eastern Horizons", posterImage: "/placeholder.svg" },
+  { id: "c9", date: "1978-11-22", venue: "Kyoto Concert Hall", city: "Kyoto", country: "Japó", tourName: "Eastern Horizons", notes: "Concert final de la gira", posterImage: "/placeholder.svg" },
+  { id: "c10", date: "1979-06-21", venue: "Solstici d'Estiu", city: "Stonehenge", country: "Regne Unit", notes: "Actuació especial a l'alba", posterImage: "/placeholder.svg" },
 ];
 
 // ============================================

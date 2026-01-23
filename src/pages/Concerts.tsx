@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PosterLightbox } from "@/components/ui/PosterLightbox";
 import { concerts, pageTexts } from "@/data/content";
 import { MapPin, Calendar } from "lucide-react";
 
@@ -39,8 +40,17 @@ const Concerts = () => {
                       className="p-6 border border-border rounded bg-card/30 hover:border-primary/30 transition-all duration-300"
                     >
                       <div className="flex flex-col md:flex-row md:items-center gap-4">
+                        {/* Poster thumbnail with lightbox */}
+                        {concert.posterImage && (
+                          <PosterLightbox
+                            posterImage={concert.posterImage}
+                            alt={`Pòster del concert a ${concert.venue}, ${concert.city}`}
+                            thumbnailSize="medium"
+                          />
+                        )}
+
                         {/* Date */}
-                        <div className="flex items-center gap-2 md:w-40">
+                        <div className="flex items-center gap-2 md:w-32">
                           <Calendar size={14} className="text-secondary" />
                           <span className="font-mono text-sm text-secondary">
                             {new Date(concert.date).toLocaleDateString('ca-ES', {
