@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { discography } from "@/data/content";
+import { BandcampAlbumEmbed } from "@/components/ui/BandcampPlayer";
 import { ArrowLeft, Play, ExternalLink } from "lucide-react";
 
 const DiscDetail = () => {
@@ -91,11 +92,23 @@ const DiscDetail = () => {
                 </div>
               )}
 
+              {/* Bandcamp embed placeholder */}
+              <div className="mb-8">
+                <h2 className="font-mono text-sm text-muted-foreground mb-4 tracking-wider">
+                  ESCOLTAR MOSTRA
+                </h2>
+                <BandcampAlbumEmbed 
+                  albumTitle={disc.title}
+                  albumArt={disc.coverImage}
+                  bandcampUrl={disc.listenLinks?.bandcamp || "https://bandcamp.com"}
+                />
+              </div>
+
               {/* Listen links */}
               {disc.listenLinks && Object.keys(disc.listenLinks).length > 0 && (
                 <div>
                   <h2 className="font-mono text-sm text-muted-foreground mb-4 tracking-wider">
-                    ESCOLTAR
+                    PLATAFORMES
                   </h2>
                   <div className="flex flex-wrap gap-3">
                     {disc.listenLinks.spotify && (

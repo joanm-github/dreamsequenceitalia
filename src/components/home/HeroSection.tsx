@@ -1,27 +1,28 @@
 import heroStudio from "@/assets/hero-studio.jpg";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Music } from "lucide-react";
 import { siteConfig } from "@/data/content";
 import { AudioVisualizer } from "@/components/ui/AudioVisualizer";
+import { BandcampPlayer } from "@/components/ui/BandcampPlayer";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat sepia-warm"
         style={{ backgroundImage: `url(${heroStudio})` }}
       />
       
       {/* Overlays */}
-      <div className="absolute inset-0 bg-background/70" />
+      <div className="absolute inset-0 bg-background/75" />
       <div className="absolute inset-0 bg-gradient-glow opacity-50" />
       <div className="absolute inset-0 bg-gradient-vignette" />
-      <div className="absolute inset-0 grid-lines opacity-20" />
+      <div className="absolute inset-0 grid-lines opacity-15" />
       
       {/* Scanlines */}
       <div className="absolute inset-0 scanlines pointer-events-none" />
       
-      {/* Animated glow orbs */}
+      {/* Animated glow orbs - warm */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-3xl animate-float animation-delay-1000" />
 
@@ -44,12 +45,17 @@ export const HeroSection = () => {
           {siteConfig.manifesto}
         </p>
 
-        {/* Audio visualizer */}
-        <div className="flex justify-center mb-12 slide-up animation-delay-400">
+        {/* Audio visualizer with Bandcamp player */}
+        <div className="flex flex-col items-center gap-4 mb-12 slide-up animation-delay-400">
           <div className="flex items-center gap-4 px-6 py-3 border border-border rounded bg-card/50 backdrop-blur">
-            <div className="w-2 h-2 rounded-full bg-primary animate-glow" />
+            <div className="w-2 h-2 rounded-full bg-secondary animate-glow" />
             <span className="font-mono text-xs text-muted-foreground">SENYAL ACTIU</span>
             <AudioVisualizer barCount={16} />
+          </div>
+          
+          {/* Bandcamp player placeholder */}
+          <div className="w-full max-w-md">
+            <BandcampPlayer size="small" />
           </div>
         </div>
 
