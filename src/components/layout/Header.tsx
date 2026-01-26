@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/content";
 import logoDs from "@/assets/logo-ds.jpg";
+import { CartButton } from "@/components/cart/CartButton";
 
 const navLinks = [
   { href: "/", label: "Inici" },
@@ -51,6 +52,7 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
+            <CartButton />
           </nav>
 
           {/* Mobile Menu Button */}
