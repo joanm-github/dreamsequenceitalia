@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { timeline, pageTexts } from "@/data/content";
+import { bandMembers } from "@/data/bandMembers";
+import { BandMemberCard } from "@/components/biography/BandMemberCard";
 import { Disc, MapPin, Users, Star } from "lucide-react";
 
 const typeIcons = {
@@ -26,8 +28,29 @@ const Biography = () => {
             BIOGRAFIA
           </SectionTitle>
 
+          {/* Band Members Section */}
+          <div className="mt-12 mb-24">
+            <h2 className="font-mono text-xl text-primary/80 mb-8 flex items-center gap-4">
+              <span className="text-primary/40">//</span>
+              El Trio
+            </h2>
+            <div className="space-y-8">
+              {bandMembers.map((member, index) => (
+                <BandMemberCard key={member.id} member={member} index={index} />
+              ))}
+            </div>
+          </div>
+
+          {/* Timeline Section */}
+          <div className="mb-16">
+            <h2 className="font-mono text-xl text-primary/80 mb-8 flex items-center gap-4">
+              <span className="text-primary/40">//</span>
+              Cronologia
+            </h2>
+          </div>
+
           {/* Timeline */}
-          <div className="relative mt-16">
+          <div className="relative">
             {/* Central line */}
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/30 to-transparent" />
 

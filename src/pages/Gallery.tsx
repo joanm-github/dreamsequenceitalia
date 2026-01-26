@@ -53,8 +53,12 @@ const Gallery = () => {
                         onClick={() => setSelectedImage(globalIndex)}
                         className="aspect-square bg-card border border-border rounded overflow-hidden hover:border-primary/50 transition-all duration-300 group"
                       >
-                        <div className="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center relative">
-                          <span className="font-mono text-2xl text-primary/10">{img.year}</span>
+                        <div className="w-full h-full relative overflow-hidden">
+                          <img 
+                            src={img.src} 
+                            alt={img.alt}
+                            className="w-full h-full object-cover sepia-warm group-hover:scale-105 transition-transform duration-500"
+                          />
                           {/* Hover overlay */}
                           <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
                             <span className="text-xs text-center text-muted-foreground">
@@ -104,12 +108,12 @@ const Gallery = () => {
               className="max-w-4xl max-h-[80vh] p-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-video bg-card border border-border rounded overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <span className="font-mono text-6xl text-primary/20">
-                    {gallery[selectedImage].year}
-                  </span>
-                </div>
+              <div className="border border-border rounded overflow-hidden">
+                <img 
+                  src={gallery[selectedImage].src} 
+                  alt={gallery[selectedImage].alt}
+                  className="max-h-[70vh] w-auto mx-auto sepia-warm"
+                />
               </div>
               <div className="mt-4 text-center">
                 <p className="text-foreground">{gallery[selectedImage].alt}</p>
