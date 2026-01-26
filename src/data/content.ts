@@ -9,6 +9,16 @@ import albumKristallnacht from "@/assets/album-kristallnacht.jpg";
 import albumElektrische from "@/assets/album-elektrische.jpg";
 import albumMorgenrot from "@/assets/album-morgenrot.jpg";
 
+// Band photos
+import bandCathedral from "@/assets/band-cathedral.jpg";
+import bandPortrait from "@/assets/band-portrait.jpg";
+import bandCasual from "@/assets/band-casual.jpg";
+import concertSynths from "@/assets/concert-synths.jpg";
+
+// Tour posters
+import posterMilano1973 from "@/assets/poster-milano-1973.jpg";
+import posterPortugal1976 from "@/assets/poster-portugal-1976.jpg";
+
 export interface Disc {
   id: string;
   title: string;
@@ -64,10 +74,10 @@ export interface MerchItem {
 // INFORMACIÓ GENERAL
 // ============================================
 export const siteConfig = {
-  bandName: "KOSMISCHE WELLE",
+  bandName: "DREAM SEQUENCE",
   tagline: "Paisatges Sonors Electrònics des de 1972",
-  manifesto: "En les profunditats dels circuits analògics, on el silici somia en ones sinusoïdals, vam descobrir un nou territori sonor. No música, sinó atmosferes. No melodies, sinó horitzons.",
-  description: "Pioners de la música electrònica ambiental, explorant els límits del so des dels anys 70.",
+  manifesto: "En les profunditats dels circuits analògics, on el silici somia en ones sinusoïdals, tres dones van descobrir un nou territori sonor. No música, sinó atmosferes. No melodies, sinó horitzons infinits.",
+  description: "Trio femení pioner de la música electrònica ambiental, explorant els límits del so des dels anys 70.",
 };
 
 // ============================================
@@ -76,21 +86,21 @@ export const siteConfig = {
 export const timeline: TimelineEvent[] = [
   {
     year: 1972,
-    title: "Formació a Berlín",
-    description: "Klaus Richter i Hans Zimmermann es troben en un estudi improvisat a Kreuzberg. Amb un Minimoog, un Mellotron i cintes magnètiques, comencen a experimentar amb paisatges sonors.",
+    title: "Formació a Londres",
+    description: "Sarah Whitmore, Emma Blackwood i Fiona Gray es troben en un estudi improvisat a Camden. Amb un Minimoog, un Mellotron i cintes magnètiques, comencen a experimentar amb paisatges sonors.",
     type: "formation"
   },
   {
     year: 1973,
     title: "Primer àlbum: Zeitstrom",
-    description: "Gravat en directe durant una nit de gener. Les cintes capturen quatre hores de improvisació que es condensen en el seu debut revelador.",
+    description: "Gravat en directe durant una nit de gener. Les cintes capturen quatre hores d'improvisació que es condensen en el seu debut revelador.",
     type: "album"
   },
   {
-    year: 1974,
-    title: "S'uneix Petra Voss",
-    description: "La violoncel·lista experimental Petra Voss aporta textures orgàniques al so electrònic, creant un diàleg únic entre acústic i sintètic.",
-    type: "formation"
+    year: 1973,
+    title: "Concert a Milà",
+    description: "Primera actuació internacional al Teatro Lirico de Milà. El públic italià descobreix el so únic de Dream Sequence.",
+    type: "tour"
   },
   {
     year: 1975,
@@ -105,9 +115,15 @@ export const timeline: TimelineEvent[] = [
     type: "album"
   },
   {
+    year: 1976,
+    title: "Gira per Portugal",
+    description: "Tres concerts històrics a Porto, Lisboa i Coimbra. Connexió especial amb el públic portuguès que influenciarà el so de la dècada següent.",
+    type: "tour"
+  },
+  {
     year: 1977,
     title: "Residència al Planetari de Munic",
-    description: "Durant sis mesos, el grup crea bandes sonores per a projeccions astronòmiques, fusionant imatge i so d'una manera pionera.",
+    description: "Durant sis mesos, el trio crea bandes sonores per a projeccions astronòmiques, fusionant imatge i so d'una manera pionera.",
     type: "milestone"
   },
   {
@@ -133,7 +149,7 @@ export const discography: Disc[] = [
     title: "Zeitstrom",
     year: 1973,
     coverImage: albumZeitstrom,
-    description: "El debut que va redefinir els límits de la música electrònica. Gravat en una sola nit gelada de gener, Zeitstrom captura la essència de la improvisació cósmica.",
+    description: "El debut que va redefinir els límits de la música electrònica. Gravat en una sola nit gelada de gener, Zeitstrom captura l'essència de la improvisació còsmica de tres dones visionàries.",
     tracklist: [
       "Erwachen (12:34)",
       "Stromschnellen (18:22)",
@@ -203,30 +219,32 @@ export const discography: Disc[] = [
 // CONCERTS HISTÒRICS
 // ============================================
 export const concerts: Concert[] = [
-  { id: "c1", date: "1975-03-15", venue: "Catedral de Colònia", city: "Colònia", country: "Alemanya", tourName: "Nebel über Europa", notes: "Concert inaugural de la gira", posterImage: "/placeholder.svg" },
-  { id: "c2", date: "1975-03-22", venue: "Paradiso", city: "Amsterdam", country: "Països Baixos", tourName: "Nebel über Europa", posterImage: "/placeholder.svg" },
-  { id: "c3", date: "1975-04-05", venue: "Roundhouse", city: "Londres", country: "Regne Unit", tourName: "Nebel über Europa", notes: "Sold out en 2 hores", posterImage: "/placeholder.svg" },
-  { id: "c4", date: "1975-04-12", venue: "Olympia", city: "París", country: "França", tourName: "Nebel über Europa", posterImage: "/placeholder.svg" },
-  { id: "c5", date: "1976-09-20", venue: "Berliner Philharmonie", city: "Berlín", country: "Alemanya", notes: "Presentació de Kristallnacht", posterImage: "/placeholder.svg" },
-  { id: "c6", date: "1977-01-10", venue: "Planetari de Munic", city: "Munic", country: "Alemanya", notes: "Inici de la residència", posterImage: "/placeholder.svg" },
-  { id: "c7", date: "1978-11-08", venue: "Shibuya Kokaido", city: "Tòquio", country: "Japó", tourName: "Eastern Horizons", posterImage: "/placeholder.svg" },
-  { id: "c8", date: "1978-11-15", venue: "Festival Hall", city: "Osaka", country: "Japó", tourName: "Eastern Horizons", posterImage: "/placeholder.svg" },
-  { id: "c9", date: "1978-11-22", venue: "Kyoto Concert Hall", city: "Kyoto", country: "Japó", tourName: "Eastern Horizons", notes: "Concert final de la gira", posterImage: "/placeholder.svg" },
-  { id: "c10", date: "1979-06-21", venue: "Solstici d'Estiu", city: "Stonehenge", country: "Regne Unit", notes: "Actuació especial a l'alba", posterImage: "/placeholder.svg" },
+  { id: "c1", date: "1973-12-07", venue: "Teatro Lirico", city: "Milà", country: "Itàlia", tourName: "Prima Luce Tour", notes: "Concert inaugural internacional", posterImage: posterMilano1973 },
+  { id: "c2", date: "1975-03-15", venue: "Catedral de Colònia", city: "Colònia", country: "Alemanya", tourName: "Nebel über Europa", notes: "Concert inaugural de la gira" },
+  { id: "c3", date: "1975-03-22", venue: "Paradiso", city: "Amsterdam", country: "Països Baixos", tourName: "Nebel über Europa" },
+  { id: "c4", date: "1975-04-05", venue: "Roundhouse", city: "Londres", country: "Regne Unit", tourName: "Nebel über Europa", notes: "Sold out en 2 hores" },
+  { id: "c5", date: "1975-04-12", venue: "Olympia", city: "París", country: "França", tourName: "Nebel über Europa" },
+  { id: "c6", date: "1976-09-20", venue: "Berliner Philharmonie", city: "Berlín", country: "Alemanya", notes: "Presentació de Kristallnacht" },
+  { id: "c7", date: "1976-11-10", venue: "Teatro São João", city: "Porto", country: "Portugal", tourName: "Iberian Dreams", posterImage: posterPortugal1976 },
+  { id: "c8", date: "1976-11-12", venue: "Coliseu dos Recreios", city: "Lisboa", country: "Portugal", tourName: "Iberian Dreams", posterImage: posterPortugal1976 },
+  { id: "c9", date: "1976-11-14", venue: "Convento de Santa Clara-a-Nova", city: "Coimbra", country: "Portugal", tourName: "Iberian Dreams", notes: "Concert final de la gira portuguesa", posterImage: posterPortugal1976 },
+  { id: "c10", date: "1977-01-10", venue: "Planetari de Munic", city: "Munic", country: "Alemanya", notes: "Inici de la residència" },
+  { id: "c11", date: "1978-11-08", venue: "Shibuya Kokaido", city: "Tòquio", country: "Japó", tourName: "Eastern Horizons" },
+  { id: "c12", date: "1978-11-15", venue: "Festival Hall", city: "Osaka", country: "Japó", tourName: "Eastern Horizons" },
+  { id: "c13", date: "1978-11-22", venue: "Kyoto Concert Hall", city: "Kyoto", country: "Japó", tourName: "Eastern Horizons", notes: "Concert final de la gira" },
+  { id: "c14", date: "1979-06-21", venue: "Solstici d'Estiu", city: "Stonehenge", country: "Regne Unit", notes: "Actuació especial a l'alba" },
 ];
 
 // ============================================
 // GALERIA
 // ============================================
 export const gallery: GalleryImage[] = [
-  { id: "g1", src: "/placeholder.svg", alt: "Klaus Richter al Minimoog, 1973", era: "Primers Anys (1972-1974)", year: 1973, caption: "Klaus durant les sessions de Zeitstrom" },
-  { id: "g2", src: "/placeholder.svg", alt: "Estudi de Kreuzberg", era: "Primers Anys (1972-1974)", year: 1972, caption: "L'estudi original a Berlín" },
-  { id: "g3", src: "/placeholder.svg", alt: "Concert a la Catedral de Colònia", era: "Era Clàssica (1975-1977)", year: 1975, caption: "Nebel über Europa Tour" },
-  { id: "g4", src: "/placeholder.svg", alt: "Petra Voss al violoncel", era: "Era Clàssica (1975-1977)", year: 1976, caption: "Sessions de Kristallnacht" },
-  { id: "g5", src: "/placeholder.svg", alt: "Planetari de Munic", era: "Era Clàssica (1975-1977)", year: 1977, caption: "Residència al planetari" },
-  { id: "g6", src: "/placeholder.svg", alt: "Gira japonesa", era: "Expansió (1978-1979)", year: 1978, caption: "Backstage a Tòquio" },
-  { id: "g7", src: "/placeholder.svg", alt: "Equip del grup", era: "Expansió (1978-1979)", year: 1979, caption: "El setup complet: ARP, Moog, Roland" },
-  { id: "g8", src: "/placeholder.svg", alt: "Stonehenge", era: "Expansió (1978-1979)", year: 1979, caption: "Solstici d'estiu" },
+  { id: "g1", src: bandCathedral, alt: "Dream Sequence a la catedral, 1974", era: "Primers Anys (1972-1974)", year: 1974, caption: "Sarah, Emma i Fiona explorant acústiques sagrades" },
+  { id: "g2", src: bandPortrait, alt: "Retrat del trio", era: "Primers Anys (1972-1974)", year: 1973, caption: "Sessió fotogràfica per a Zeitstrom" },
+  { id: "g3", src: bandCasual, alt: "Moment relaxat", era: "Primers Anys (1972-1974)", year: 1974, caption: "Entre sessions d'estudi" },
+  { id: "g4", src: concertSynths, alt: "Concert amb sintetitzadors", era: "Era Clàssica (1975-1977)", year: 1976, caption: "Nebel über Europa Tour" },
+  { id: "g5", src: posterMilano1973, alt: "Pòster Milà 1973", era: "Primers Anys (1972-1974)", year: 1973, caption: "Prima Luce Tour - Teatro Lirico" },
+  { id: "g6", src: posterPortugal1976, alt: "Pòster Portugal 1976", era: "Era Clàssica (1975-1977)", year: 1976, caption: "Iberian Dreams Tour" },
 ];
 
 // ============================================
@@ -251,11 +269,11 @@ export const merchItems: MerchItem[] = [
   },
   {
     id: "m3",
-    name: "Pòster Nebel Tour 1975",
-    description: "Reproducció del pòster original de la gira. 60x90cm, paper d'arxiu.",
-    image: "/placeholder.svg",
+    name: "Pòster Milà 1973",
+    description: "Reproducció del pòster original del concert a Milà. 60x90cm, paper d'arxiu.",
+    image: posterMilano1973,
     price: "25€",
-    available: false
+    available: true
   },
 ];
 
@@ -264,20 +282,20 @@ export const merchItems: MerchItem[] = [
 // ============================================
 export const pageTexts = {
   biography: {
-    intro: "KOSMISCHE WELLE va néixer de la confluència de tecnologia i visió artística en el Berlín dels anys 70. En una ciutat dividida, tres músics van trobar en els sintetitzadors una via d'exploració sense fronteres.",
-    outro: "El llegat del grup continua influenciant generacions de músics electrònics, des de l'ambient fins al techno, demostrant que la recerca sonora no coneix límits temporals."
+    intro: "DREAM SEQUENCE va néixer de la confluència de tecnologia i visió artística al Londres dels anys 70. Tres dones visionàries van trobar en els sintetitzadors una via d'exploració sense fronteres.",
+    outro: "El llegat del trio continua influenciant generacions de músics electrònics, des de l'ambient fins al techno, demostrant que la recerca sonora no coneix límits temporals ni de gènere."
   },
   discography: {
     intro: "Cada àlbum és un viatge, cada pista un paisatge. Aquí trobareu el catàleg complet de les nostres expedicions sonores."
   },
   concerts: {
-    intro: "Arxiu històric de totes les actuacions del grup. Cada concert era únic, una improvisació irrepetible en el temps i l'espai."
+    intro: "Arxiu històric de totes les actuacions del trio. Cada concert era únic, una improvisació irrepetible en el temps i l'espai."
   },
   gallery: {
     intro: "Imatges que capturen moments de creació, actuació i experimentació. Documents visuals d'una era de descobriment sonor."
   },
   merch: {
     intro: "Articles oficials per als qui volen portar un tros d'història. Disponibilitat limitada.",
-    contact: "Per a comandes especials o consultes: merch@kosmischewelle.com"
+    contact: "Per a comandes especials o consultes: merch@dreamsequence.com"
   }
 };

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/content";
+import logoDs from "@/assets/logo-ds.jpg";
 
 const navLinks = [
   { href: "/", label: "Inici" },
@@ -23,9 +24,16 @@ export const Header = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="font-mono text-lg md:text-xl tracking-wider text-primary crt-glow hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            {siteConfig.bandName}
+            <img 
+              src={logoDs} 
+              alt="Dream Sequence" 
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-primary/30"
+            />
+            <span className="font-mono text-lg md:text-xl tracking-wider text-primary crt-glow">
+              {siteConfig.bandName}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

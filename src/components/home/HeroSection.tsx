@@ -1,5 +1,6 @@
-import heroStudio from "@/assets/hero-studio.jpg";
-import { ArrowDown, Music } from "lucide-react";
+import concertSynths from "@/assets/concert-synths.jpg";
+import logoDs from "@/assets/logo-ds.jpg";
+import { ArrowDown } from "lucide-react";
 import { siteConfig } from "@/data/content";
 import { AudioVisualizer } from "@/components/ui/AudioVisualizer";
 import { BandcampPlayer } from "@/components/ui/BandcampPlayer";
@@ -10,7 +11,7 @@ export const HeroSection = () => {
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat sepia-warm"
-        style={{ backgroundImage: `url(${heroStudio})` }}
+        style={{ backgroundImage: `url(${concertSynths})` }}
       />
       
       {/* Overlays */}
@@ -28,8 +29,17 @@ export const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* Pre-title */}
+        {/* Logo */}
         <div className="fade-in-slow mb-6">
+          <img 
+            src={logoDs} 
+            alt="Dream Sequence Logo" 
+            className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full border-2 border-primary/30 shadow-lg"
+          />
+        </div>
+
+        {/* Pre-title */}
+        <div className="fade-in-slow mb-4">
           <span className="font-mono text-xs md:text-sm text-primary/60 tracking-[0.3em] uppercase">
             Electrònica Ambiental · 1972-present
           </span>
