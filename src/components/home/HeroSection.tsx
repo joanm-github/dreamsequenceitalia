@@ -1,14 +1,32 @@
+import { useEffect, useState } from "react";
 import concertSynths from "@/assets/concert-synths.jpg";
 import logoDs from "@/assets/logo-ds.jpg";
 import { siteConfig } from "@/data/content";
 
 export const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Parallax effect - background moves slower than content
+  const parallaxOffset = scrollY * 0.4;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image with parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat sepia-warm"
-        style={{ backgroundImage: `url(${concertSynths})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat sepia-warm transition-transform duration-100 ease-out"
+        style={{ 
+          backgroundImage: `url(${concertSynths})`,
+          transform: `translateY(${parallaxOffset}px) scale(1.1)`,
+        }}
       />
       
       {/* Overlays */}
