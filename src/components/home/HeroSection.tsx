@@ -1,8 +1,6 @@
 import concertSynths from "@/assets/concert-synths.jpg";
 import logoDs from "@/assets/logo-ds.jpg";
-import { ArrowDown } from "lucide-react";
 import { siteConfig } from "@/data/content";
-import { BandcampPlayer } from "@/components/ui/BandcampPlayer";
 
 export const HeroSection = () => {
   return (
@@ -54,15 +52,8 @@ export const HeroSection = () => {
           {siteConfig.manifesto}
         </p>
 
-        {/* Bandcamp player */}
-        <div className="flex flex-col items-center gap-4 mb-12 slide-up animation-delay-400">
-          <div className="w-full max-w-md">
-            <BandcampPlayer size="small" />
-          </div>
-        </div>
-
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center slide-up animation-delay-600">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center slide-up animation-delay-400">
           <a
             href="/discografia"
             className="btn-analog px-8 py-3 font-mono text-sm tracking-wider"
@@ -75,14 +66,6 @@ export const HeroSection = () => {
           >
             LLEGIR HISTÒRIA
           </a>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 slide-up animation-delay-1000">
-          <div className="flex flex-col items-center gap-2 text-muted-foreground animate-float">
-            <span className="font-mono text-xs tracking-wider">SCROLL</span>
-            <ArrowDown size={16} className="text-primary" />
-          </div>
         </div>
       </div>
     </section>
