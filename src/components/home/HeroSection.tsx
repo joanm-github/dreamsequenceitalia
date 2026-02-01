@@ -2,7 +2,6 @@ import concertSynths from "@/assets/concert-synths.jpg";
 import logoDs from "@/assets/logo-ds.jpg";
 import { ArrowDown } from "lucide-react";
 import { siteConfig } from "@/data/content";
-import { AudioVisualizer } from "@/components/ui/AudioVisualizer";
 import { BandcampPlayer } from "@/components/ui/BandcampPlayer";
 
 export const HeroSection = () => {
@@ -55,15 +54,8 @@ export const HeroSection = () => {
           {siteConfig.manifesto}
         </p>
 
-        {/* Audio visualizer with Bandcamp player */}
+        {/* Bandcamp player */}
         <div className="flex flex-col items-center gap-4 mb-12 slide-up animation-delay-400">
-          <div className="flex items-center gap-4 px-6 py-3 border border-border rounded bg-card/50 backdrop-blur">
-            <div className="w-2 h-2 rounded-full bg-secondary animate-glow" />
-            <span className="font-mono text-xs text-muted-foreground">SENYAL ACTIU</span>
-            <AudioVisualizer barCount={16} />
-          </div>
-          
-          {/* Bandcamp player placeholder */}
           <div className="w-full max-w-md">
             <BandcampPlayer size="small" />
           </div>
