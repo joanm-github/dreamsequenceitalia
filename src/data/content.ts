@@ -4,10 +4,11 @@
 // ============================================
 
 // Album cover imports
-import albumZeitstrom from "@/assets/album-zeitstrom.jpg";
-import albumKristallnacht from "@/assets/album-kristallnacht.jpg";
-import albumElektrische from "@/assets/album-elektrische.jpg";
-import albumMorgenrot from "@/assets/album-morgenrot.jpg";
+import albumAntheris from "@/assets/album-antheris.jpg";
+import albumGanymede from "@/assets/album-ganymede.jpg";
+import albumNebula from "@/assets/album-nebula.jpg";
+import albumNebbia from "@/assets/album-nebbia.png";
+import albumSondeAtlantide from "@/assets/album-sonde-atlantide.png";
 
 // Band photos
 import bandCathedral from "@/assets/band-cathedral.jpg";
@@ -145,73 +146,90 @@ export const timeline: TimelineEvent[] = [
 // ============================================
 export const discography: Disc[] = [
   {
-    id: "zeitstrom",
-    title: "Zeitstrom",
+    id: "antheris",
+    title: "Antheris on b.1061 Sequence",
     year: 1973,
-    coverImage: albumZeitstrom,
-    description: "El debut que va redefinir els límits de la música electrònica. Gravat en una sola nit gelada de gener, Zeitstrom captura l'essència de la improvisació còsmica de tres dones visionàries.",
+    coverImage: albumAntheris,
+    description: "El debut visionari que va obrir les portes a nous mons sonors. Una explosió de colors i textures electròniques inspirades en paisatges còsmics.",
     tracklist: [
-      "Erwachen (12:34)",
-      "Stromschnellen (18:22)",
-      "Zeitgeist I (8:45)",
-      "Nebelschwaden (15:08)",
-      "Zeitgeist II (9:56)"
+      "Antheris I (12:34)",
+      "Cosmic Garden (18:22)",
+      "b.1061 (8:45)",
+      "Sequence Prime (15:08)",
+      "Antheris II (9:56)"
     ],
-    notes: "Gravat amb Minimoog Model D, Mellotron M400, EMS VCS3 i cintes Revox A77.",
+    notes: "Gravat amb Minimoog Model D, Mellotron M400, EMS VCS3.",
     listenLinks: {
       spotify: "#",
       bandcamp: "#"
     }
   },
   {
-    id: "kristallnacht",
-    title: "Kristallnacht",
-    year: 1976,
-    coverImage: albumKristallnacht,
-    description: "Obra mestra conceptual que explora la fragilitat i la ressonància. Cada peça és un estudi sobre textures cristal·lines i ecos infinits.",
+    id: "ganymede",
+    title: "Ganymede",
+    year: 1975,
+    coverImage: albumGanymede,
+    description: "Un viatge contemplatiu sobre les aigües infinites. Sons marins i atmosferes etèries que evoquen la immensitat de l'oceà.",
     tracklist: [
-      "Prisma (10:23)",
-      "Refraktion (14:45)",
-      "Scherbenmeer (20:12)",
-      "Lichtbrechung (8:34)",
-      "Diamantstaub (16:58)"
+      "Horizons (10:23)",
+      "Seabirds (14:45)",
+      "Deep Blue (20:12)",
+      "Calm Waters (8:34)",
+      "Ganymede Suite (16:58)"
     ],
-    notes: "Primer àlbum gravat amb l'ARP 2600 i tècniques de delay experimental.",
+    notes: "Gravat amb ARP 2600 i efectes de delay experimental.",
     listenLinks: {
       spotify: "#",
       youtube: "#"
     }
   },
   {
-    id: "elektrische-traume",
-    title: "Elektrische Träume",
-    year: 1978,
-    coverImage: albumElektrische,
-    description: "Triple àlbum que documenta la residència al Planetari de Munic. Sons que acompanyaven projeccions d'estrelles i galàxies.",
+    id: "nebula",
+    title: "Nebula",
+    year: 1976,
+    coverImage: albumNebula,
+    description: "Textures profundes i denses com núvols de pols còsmica. Un àlbum que explora les profunditats de l'espai interestelar.",
     tracklist: [
-      "Disc 1: Sternennebel (45:23)",
-      "Disc 2: Galaxienflug (42:18)",
-      "Disc 3: Kosmische Stille (48:56)"
+      "Red Giant (15:23)",
+      "Stellar Dust (12:18)",
+      "Nebula Core (18:56)"
     ],
-    notes: "Gravació en directe durant les projeccions. Inclou sons de seqüenciador modular Roland System 100.",
+    notes: "Experimentació amb seqüenciadors modulars Roland System 100.",
     listenLinks: {
       bandcamp: "#"
     }
   },
   {
-    id: "morgenrot",
-    title: "Morgenrot",
-    year: 1979,
-    coverImage: albumMorgenrot,
-    description: "Influenciat per la gira japonesa, aquest àlbum incorpora silencis més llargs i una sensibilitat zen en les estructures.",
+    id: "nebbia",
+    title: "Nebbia",
+    year: 1978,
+    coverImage: albumNebbia,
+    description: "Paisatges sonors de boira i silenci. Influenciat per la natura i la contemplació, un exercici de minimalisme electrònic.",
     tracklist: [
-      "Erste Licht (11:45)",
-      "Tau (8:23)",
-      "Horizont (19:34)",
-      "Stille Wasser (14:12)",
-      "Aufgang (12:08)"
+      "Alba (11:45)",
+      "Fog (8:23)",
+      "Solitude (19:34)",
+      "Bare Trees (14:12)",
+      "Mist (12:08)"
     ],
-    notes: "Col·laboració amb el mestre de shakuhachi Yoshida Minoru.",
+    notes: "Sessions contemplatives gravades a la tardor.",
+  },
+  {
+    id: "sonde-atlantide",
+    title: "Le Sonde di Atlantide",
+    year: 1979,
+    coverImage: albumSondeAtlantide,
+    description: "Banda sonora per a la RAI italiana. Sons submarins i misteriosos que acompanyaven un documental sobre exploracions oceàniques.",
+    tracklist: [
+      "Discesa (10:34)",
+      "Profondità (15:22)",
+      "Atlantide (22:45)",
+      "Risalita (8:18)"
+    ],
+    notes: "Comissió de la RAI per a un documental televisiu. Logo RAI a la portada original.",
+    listenLinks: {
+      youtube: "#"
+    }
   },
 ];
 
