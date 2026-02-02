@@ -17,6 +17,10 @@ export const HeroSection = () => {
 
   // Parallax effect - background moves slower than content
   const parallaxOffset = scrollY * 0.4;
+  
+  // Fade-out effect for content - starts fading after 100px scroll, fully faded at 400px
+  const contentOpacity = Math.max(0, 1 - (scrollY - 100) / 300);
+  const contentTranslate = scrollY * 0.2;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -42,8 +46,14 @@ export const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-3xl animate-float animation-delay-1000" />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      {/* Content with fade-out effect */}
+      <div 
+        className="relative z-10 container mx-auto px-4 text-center transition-all duration-100 ease-out"
+        style={{
+          opacity: contentOpacity,
+          transform: `translateY(${contentTranslate}px)`,
+        }}
+      >
         {/* Logo */}
         <div className="fade-in-slow mb-6">
           <img 
