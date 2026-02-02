@@ -18,7 +18,13 @@ import concertSynths from "@/assets/concert-synths.jpg";
 
 // Tour posters
 import posterMilano1973 from "@/assets/poster-milano-1973.jpg";
+import posterNewYork1978 from "@/assets/poster-newyork-1978.jpg";
+import posterTrieste1976 from "@/assets/poster-trieste-1976.jpg";
+import posterAustralasia1978 from "@/assets/poster-australasia-1978.jpg";
+import posterBrussels1976 from "@/assets/poster-brussels-1976.jpg";
 import posterPortugal1976 from "@/assets/poster-portugal-1976.jpg";
+import posterAuckland1974 from "@/assets/poster-auckland-1974.jpg";
+import posterScandinavia1975 from "@/assets/poster-scandinavia-1975.jpg";
 
 export interface Disc {
   id: string;
@@ -237,20 +243,40 @@ export const discography: Disc[] = [
 // CONCERTS HISTÒRICS
 // ============================================
 export const concerts: Concert[] = [
-  { id: "c1", date: "1973-12-07", venue: "Teatro Lirico", city: "Milà", country: "Itàlia", tourName: "Prima Luce Tour", notes: "Concert inaugural internacional", posterImage: posterMilano1973 },
-  { id: "c2", date: "1975-03-15", venue: "Catedral de Colònia", city: "Colònia", country: "Alemanya", tourName: "Nebel über Europa", notes: "Concert inaugural de la gira" },
-  { id: "c3", date: "1975-03-22", venue: "Paradiso", city: "Amsterdam", country: "Països Baixos", tourName: "Nebel über Europa" },
-  { id: "c4", date: "1975-04-05", venue: "Roundhouse", city: "Londres", country: "Regne Unit", tourName: "Nebel über Europa", notes: "Sold out en 2 hores" },
-  { id: "c5", date: "1975-04-12", venue: "Olympia", city: "París", country: "França", tourName: "Nebel über Europa" },
-  { id: "c6", date: "1976-09-20", venue: "Berliner Philharmonie", city: "Berlín", country: "Alemanya", notes: "Presentació de Kristallnacht" },
-  { id: "c7", date: "1976-11-10", venue: "Teatro São João", city: "Porto", country: "Portugal", tourName: "Iberian Dreams", posterImage: posterPortugal1976 },
-  { id: "c8", date: "1976-11-12", venue: "Coliseu dos Recreios", city: "Lisboa", country: "Portugal", tourName: "Iberian Dreams", posterImage: posterPortugal1976 },
-  { id: "c9", date: "1976-11-14", venue: "Convento de Santa Clara-a-Nova", city: "Coimbra", country: "Portugal", tourName: "Iberian Dreams", notes: "Concert final de la gira portuguesa", posterImage: posterPortugal1976 },
-  { id: "c10", date: "1977-01-10", venue: "Planetari de Munic", city: "Munic", country: "Alemanya", notes: "Inici de la residència" },
-  { id: "c11", date: "1978-11-08", venue: "Shibuya Kokaido", city: "Tòquio", country: "Japó", tourName: "Eastern Horizons" },
-  { id: "c12", date: "1978-11-15", venue: "Festival Hall", city: "Osaka", country: "Japó", tourName: "Eastern Horizons" },
-  { id: "c13", date: "1978-11-22", venue: "Kyoto Concert Hall", city: "Kyoto", country: "Japó", tourName: "Eastern Horizons", notes: "Concert final de la gira" },
-  { id: "c14", date: "1979-06-21", venue: "Solstici d'Estiu", city: "Stonehenge", country: "Regne Unit", notes: "Actuació especial a l'alba" },
+  // 1973
+  { id: "c1", date: "1973-12-07", venue: "Teatro Lirico", city: "Milà", country: "Itàlia", tourName: "Prima Luce Tour", notes: "Concert inaugural internacional. Presentat per Radio Milano Sounds & Promozioni Lombardia", posterImage: posterMilano1973 },
+  
+  // 1974
+  { id: "c2", date: "1974-04-23", venue: "Little Theatre, University of Auckland", city: "Auckland", country: "Nova Zelanda", notes: "Portes 8:30 PM. Patrocinat per Radio New Zealand i Southern Sounds Records", posterImage: posterAuckland1974 },
+  
+  // 1975 - Scandinavia Tour
+  { id: "c3", date: "1975-10-10", venue: "Concert Hall", city: "Copenhagen", country: "Dinamarca", tourName: "Scandinavia Tour 1975", posterImage: posterScandinavia1975 },
+  { id: "c4", date: "1975-10-13", venue: "Konserthuset", city: "Stockholm", country: "Suècia", tourName: "Scandinavia Tour 1975", posterImage: posterScandinavia1975 },
+  { id: "c5", date: "1975-10-15", venue: "Konserthuset", city: "Gothenburg", country: "Suècia", tourName: "Scandinavia Tour 1975", posterImage: posterScandinavia1975 },
+  { id: "c6", date: "1975-10-18", venue: "Konserthus", city: "Oslo", country: "Noruega", tourName: "Scandinavia Tour 1975", posterImage: posterScandinavia1975 },
+  
+  // 1976
+  { id: "c7", date: "1976-02-03", venue: "Ancienne Belgique (AB)", city: "Brussel·les", country: "Bèlgica", notes: "Presentat per Veldeprom Events. Exclusiva RTBF / Magazine HUMO", posterImage: posterBrussels1976 },
+  { id: "c8", date: "1976-02-05", venue: "K.U.D. France Prešeren", city: "Ljubljana (Trnovo)", country: "Eslovènia", tourName: "Kosmična Avantgardna Glasba", notes: "Organitzat per ŠKUC", posterImage: posterTrieste1976 },
+  { id: "c9", date: "1976-02-05", venue: "Sala Municipal", city: "Trieste", country: "Itàlia", tourName: "Kosmična Avantgardna Glasba", posterImage: posterTrieste1976 },
+  
+  // 1976 - Portugal Tour (Iberian Dreams)
+  { id: "c10", date: "1976-11-10", venue: "Teatro São João", city: "Porto", country: "Portugal", tourName: "Iberian Dreams", notes: "Produït per SORA Produções Artísticas amb Suoni Rari (Itàlia) & Orfeu (Portugal)", posterImage: posterPortugal1976 },
+  { id: "c11", date: "1976-11-12", venue: "Coliseu dos Recreios", city: "Lisboa", country: "Portugal", tourName: "Iberian Dreams", posterImage: posterPortugal1976 },
+  { id: "c12", date: "1976-11-14", venue: "Convento de Santa Clara-a-Nova", city: "Coimbra", country: "Portugal", tourName: "Iberian Dreams", notes: "Concert final de la gira portuguesa", posterImage: posterPortugal1976 },
+  
+  // 1978 - Australasian Tour
+  { id: "c13", date: "1978-01-11", venue: "Seymour Centre", city: "Sydney", country: "Austràlia", tourName: "Australasian Tour 1978", notes: "Quadraphonic Sound. Patrocinat per ABC", posterImage: posterAustralasia1978 },
+  { id: "c14", date: "1978-01-12", venue: "Seymour Centre", city: "Sydney", country: "Austràlia", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c15", date: "1978-01-14", venue: "Dallas Brooks Hall", city: "Melbourne", country: "Austràlia", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c16", date: "1978-01-15", venue: "Dallas Brooks Hall", city: "Melbourne", country: "Austràlia", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c17", date: "1978-01-18", venue: "Festival Theatre", city: "Adelaide", country: "Austràlia", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c18", date: "1978-01-21", venue: "Perth Concert Hall", city: "Perth", country: "Austràlia", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c19", date: "1978-01-24", venue: "Auckland Town Hall", city: "Auckland", country: "Nova Zelanda", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  { id: "c20", date: "1978-01-26", venue: "Wellington Town Hall", city: "Wellington", country: "Nova Zelanda", tourName: "Australasian Tour 1978", posterImage: posterAustralasia1978 },
+  
+  // 1978 - New York
+  { id: "c21", date: "1978-03-25", venue: "Beacon Theatre", city: "Nova York", country: "EUA", notes: "Analogue Electronic Music", posterImage: posterNewYork1978 },
 ];
 
 // ============================================
